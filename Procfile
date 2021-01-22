@@ -1,1 +1,1 @@
-worker: npm run start:online
+worker: npm run start

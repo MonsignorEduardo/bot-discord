@@ -13,8 +13,8 @@
     "compile": "tsc",
     "fix": "gts fix",
     "start": "node ./build/main.js",
-    "start:online": "npm-run-all compile start",
-    "start:local": "NODE_ENV=LOCAL node ./build/main.js",
+    "start:local": "npm-run-all compile start:localRun",
+    "start:localRun":"NODE_ENV=LOCAL node ./build/main.js",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint"
