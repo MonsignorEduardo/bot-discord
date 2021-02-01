@@ -40,6 +40,11 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("pelotas")) {
+    message.channel.send('Asi es amigo mis pelotas huelen a pelotazos y no lo soporto mas no lo aguanto mas porque es un olor que induce al hambre y siempre que estoy con una tia dice joder ke pelotazos ya lo se guarra ya lo se tia pues deja de decirmelo y te guardas tu opinion.. Todos los dias igual dicen ke huele a pelotazos y yo ke hago?? Me ducho 6 veces al dia he tenido problemas por frotarme incluso con un estropajo y se me quedo en carne viva para quitar el olor a pelotazos siempre que viene un niño me dice has comido pelotazos?');
+  }
+});
 let workingFlag = false;
 let listaMensajes: Discord.Message[];
 
