@@ -30,8 +30,13 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content === 'OJO') {
-    message.channel.send('OJOOOOO');
+  if (!message.author.bot && message.content.toLowerCase().includes("ojo")) {
+    let ojo: string = "OJO"
+    var max = Math.floor(Math.random() * 20) + 1;
+    for (let i = 0; i < max; i++) {
+      ojo = ojo + "O"
+    }
+    message.channel.send(ojo);
   }
 });
 
