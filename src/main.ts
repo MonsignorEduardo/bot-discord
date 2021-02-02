@@ -45,6 +45,13 @@ client.on('message', message => {
     message.channel.send('Asi es amigo mis pelotas huelen a pelotazos y no lo soporto mas no lo aguanto mas porque es un olor que induce al hambre y siempre que estoy con una tia dice joder ke pelotazos ya lo se guarra ya lo se tia pues deja de decirmelo y te guardas tu opinion.. Todos los dias igual dicen ke huele a pelotazos y yo ke hago?? Me ducho 6 veces al dia he tenido problemas por frotarme incluso con un estropajo y se me quedo en carne viva para quitar el olor a pelotazos siempre que viene un niño me dice has comido pelotazos?');
   }
 });
+
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("ilegal")) {
+    message.channel.send('En caso de una investigación por parte de cualquier entidad federal o similar, no tengo ninguna participación con este grupo o con las personas que forman parte de él, no sé cómo estoy aquí, probablemente agregado por un tercero, no apoyo ninguna acción por los miembros de este grupo. \n連邦機関などによる調査の場合、私はこのグループまたはその中の人々と関与していません。私はここにどのように住んでいるのか知りません。おそらく第三者によって追加されたものです。このグループのメンバーによる\nIn case of an investigation by any federal entity or similar, I do not have any involvement with this group or with the people in it, I do not know how I am here, probably added by a third party, I do not support any actions by the members of this group.\nIm Falle einer Untersuchung durch eine föderale Einrichtung oder ähnliches habe ich keine Beteiligung an dieser Gruppe oder den Menschen darin, ich weiß nicht, wie ich hier bin, wahrscheinlich von einem Dritten hinzugefügt, ich unterstütze keine Maßnahmen von den Mitgliedern dieser Gruppe.\n如果任何联邦实体或类似机构进行调查，我与该团体或其中的人员没有任何关系，我不知道我在这里，可能是由第三方添加，我不支持任何行动連邦機関などによる調査の場合、私はこのグループまたはその中の人々と関与していません。私はここにどのように住んでいるのか知りません。おそらく第三者によって追加されたものです。このグループのメンバーによる\nIn case of an investigation by any federal entity or similar, I do not have any involvement with this group or with the people in it, I do not know how I am here, probably added by a third party, I do not support any actions the members of');
+  }
+});
+
 let workingFlag = false;
 let listaMensajes: Discord.Message[];
 
