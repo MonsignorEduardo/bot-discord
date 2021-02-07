@@ -52,6 +52,13 @@ client.on('message', message => {
   }
 });
 
+
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("carding")) {
+    message.channel.send('Para quienes me preguntaron que era esto esto se llama carding al realizar esta conducta se tipifica el delito de fraude tengan muchisimo cuidado la verdad que esta muy interesante el perfil yo lo estuve viendo la ideologia esta muy bueno eh cuando me titule me gustaria llevar asuntos asi muy padre eh');
+  }
+});
+
 let workingFlag = false;
 let listaMensajes: Discord.Message[];
 
