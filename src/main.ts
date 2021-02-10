@@ -59,6 +59,11 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("mujer")) {
+    message.channel.send('las mujeres sois impredecibles, como el bitcoin1!!!!!!!');
+  }
+});
 let workingFlag = false;
 let listaMensajes: Discord.Message[];
 
