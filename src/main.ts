@@ -64,6 +64,18 @@ client.on('message', message => {
     message.channel.send('las mujeres sois impredecibles, como el bitcoin1!!!!!!!');
   }
 });
+
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("pato")) {
+    let ojo: string = "🦆"
+    var max = Math.floor(Math.random() * 20) + 1;
+    for (let i = 0; i < max; i++) {
+      ojo = ojo + "🦆"
+    }
+    message.channel.send(ojo);
+  }
+});
+
 let workingFlag = false;
 let listaMensajes: Discord.Message[];
 
