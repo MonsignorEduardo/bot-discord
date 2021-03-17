@@ -82,6 +82,22 @@ client.on('message', message => {
   }
 });
 
+client.on('message', async message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("hack")) { 
+    const response = await axios({
+      method: 'get',
+      url:
+        'https://meme-api.herokuapp.com/gimme'
+    });
+    const url:string = response.data.url
+    message.channel.send(url);
+
+    }
+});
+
+
+
+
 let workingFlag = false;
 let listaMensajes: Discord.Message[];
 
