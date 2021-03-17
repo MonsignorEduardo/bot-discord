@@ -83,7 +83,7 @@ client.on('message', message => {
 });
 
 client.on('message', async message => {
-  if (!message.author.bot && message.content.toLowerCase().includes("hack")) { 
+  if (!message.author.bot && message.content.toLowerCase().includes("meme")) { 
     const response = await axios({
       method: 'get',
       url:
