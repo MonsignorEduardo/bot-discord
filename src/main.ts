@@ -1,5 +1,5 @@
 import * as Discord from 'discord.js';
-import {setIntervalAsync} from 'set-interval-async/fixed';
+import { setIntervalAsync } from 'set-interval-async/fixed';
 import axios from 'axios';
 
 const client = new Discord.Client();
@@ -73,6 +73,12 @@ client.on('message', message => {
       ojo = ojo + "🦆"
     }
     message.channel.send(ojo);
+  }
+});
+
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("hack")) {
+    message.channel.send("https://i.kym-cdn.com/entries/icons/original/000/021/807/ig9OoyenpxqdCQyABmOQBZDI0duHk2QZZmWg2Hxd4ro.jpg");
   }
 });
 
@@ -177,7 +183,7 @@ async function sendPrices() {
   const mensajes: Promise<Discord.Message>[] = [];
   if (coinEmbeds !== undefined)
     coinEmbeds.forEach(coinEmbed => {
-      const mensaje = channel.send({embed: coinEmbed});
+      const mensaje = channel.send({ embed: coinEmbed });
       mensajes.push(mensaje);
     });
   return Promise.all(mensajes);
@@ -187,7 +193,7 @@ async function editPrices() {
   const mensajes: Promise<Discord.Message>[] = [];
   if (coinEmbeds !== undefined && listaMensajes !== undefined) {
     for (let index = 0; index < listaMensajes.length; index++) {
-      mensajes.push(listaMensajes[index].edit({embed: coinEmbeds[index]}));
+      mensajes.push(listaMensajes[index].edit({ embed: coinEmbeds[index] }));
     }
     return Promise.all(mensajes);
   } else {
