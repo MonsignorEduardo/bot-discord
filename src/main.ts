@@ -81,6 +81,11 @@ client.on('message', message => {
     message.channel.send("https://i.kym-cdn.com/entries/icons/original/000/021/807/ig9OoyenpxqdCQyABmOQBZDI0duHk2QZZmWg2Hxd4ro.jpg");
   }
 });
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("invite")) {
+    message.channel.send("https://discord.com/oauth2/authorize?client_id=785298068014104609&scope=bot");
+  }
+
 
 client.on('message', async message => {
   if (!message.author.bot && message.content.toLowerCase().includes("meme")) { 
