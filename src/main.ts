@@ -108,7 +108,7 @@ client.on('message', async message => {
 });
 
 client.on('message', async message => {
-  if (!message.author.bot && message.content.toLowerCase().includes("meme2")) { 
+  if (!message.author.bot && message.content.toLowerCase().includes("pito")) { 
     const response = await axios({
       method: 'get',
       url:
