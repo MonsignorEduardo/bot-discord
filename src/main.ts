@@ -118,7 +118,7 @@ client.on('message', async message => {
     var max = Math.floor(Math.random() * numerajo) + 1;
 
     //const url:string = response.data.children.max.url_overridden_by_dest
-    const url:string = response.data.children
+    const url:string = response
     message.channel.send(url);
 
     }
