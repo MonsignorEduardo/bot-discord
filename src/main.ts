@@ -65,6 +65,13 @@ client.on('message', message => {
   }
 });
 
+
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("glovo")) {
+    message.channel.send('12€ descuento glovo con el code: X1143HJ :smiling_imp: ');
+  }
+});
+
 client.on('message', message => {
   if (!message.author.bot && message.content.toLowerCase().includes("pato")) {
     let ojo: string = "🦆"
