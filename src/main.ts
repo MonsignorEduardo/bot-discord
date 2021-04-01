@@ -92,7 +92,7 @@ client.on('message', message => {
   if (!message.author.bot && message.content.toLowerCase().includes("invite")) {
     message.channel.send("https://discord.com/oauth2/authorize?client_id=785298068014104609&scope=bot");
   }
-
+});
 
 client.on('message', async message => {
   if (!message.author.bot && message.content.toLowerCase().includes("meme")) { 
