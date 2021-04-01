@@ -117,7 +117,8 @@ client.on('message', async message => {
     const numerajo:number = +(response.data.dist)
     var max = Math.floor(Math.random() * numerajo) + 1;
 
-    const url:string = response.data.children.max.url_overridden_by_dest
+    //const url:string = response.data.children.max.url_overridden_by_dest
+    const url:string = response.data.children
     message.channel.send(url);
 
     }
