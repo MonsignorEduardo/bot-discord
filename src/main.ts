@@ -107,6 +107,21 @@ client.on('message', async message => {
     }
 });
 
+client.on('message', async message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("meme2")) { 
+    const response = await axios({
+      method: 'get',
+      url:
+        'https://www.reddit.com/r/orslokx/top.json?/?t=day'
+    });
+    const numerajo:int = response.data.dist
+    var max = Math.floor(Math.random() * numerajo) + 1;
+
+    const url:string = response.data.children.max.url_overridden_by_dest
+    message.channel.send(url);
+
+    }
+});
 
 
 
