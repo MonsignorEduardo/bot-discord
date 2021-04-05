@@ -65,6 +65,11 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("juanjuan")) {
+    message.channel.send('dime :face_with_monocle:');
+  }
+});
 
 client.on('message', message => {
   if (!message.author.bot && message.content.toLowerCase().includes("glovo")) {
