@@ -59,6 +59,13 @@ client.on('message', message => {
   }
 });
 
+
+
+client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("trabajo")) {
+    message.channel.send('He dejado de buscar trabajo :hearts: \nHace casi un mes que la última empresa me dijo que NO para un puesto de Marketing de Contenidos aquí en Bruselas. \nY la verdad es que me alegré un montón. Sentí alivio y pensé: pero Albita, ¿qué pacha? \nDesde entonces estoy en pausa porque necesito ser coherente con lo que siento. Y el descubrimiento ha sido muy simple: siento que el Marketing no está alineado con mis valores personales ni con lo que me motiva.\nPero entonces, ¿qué quieres, Albita, corazón, por dioh, otra vez a cambiar de área? \nY yo qué sé. Necesito seguir dudando para volver a enfocar.\n¿Cuántas veces te apagas las dudas por el miedo a cambiar? :hearts:');
+  }
+});
 client.on('message', message => {
   if (!message.author.bot && message.content.toLowerCase().includes("mujer")) {
     message.channel.send('las mujeres sois impredecibles, como el bitcoin1!!!!!!!');
