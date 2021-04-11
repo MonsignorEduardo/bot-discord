@@ -126,20 +126,19 @@ client.on('message', async message => {
 
 client.on('message', async message => {
   if (!message.author.bot && message.content.toLowerCase().includes("pito")) { 
-    var x = foo.data.dist;
-    var y = +x;
+    var x = response.data.data.dist
+    var y = +x
     var isurl = true;
     var url = "POLLAGORDA69";
     while (isurl == true) {
-        console.log(max);
-        var max = Math.floor(Math.random() * y) + 1;
+        var max = Math.floor(Math.random() * y) + 1
         //console.log(foo.data.children[max].data);
         try{
-            var isurl = foo.data.children[max].data.is_video
-            var url = foo.data.children[max].data.url_overridden_by_dest
+            var isurl = response.data.data.children[max].data.is_video
+            var url = response.data.data.children[max].data.url_overridden_by_dest
         }
         catch{
-            console.log("WAT")
+            continue
         }
     }
     console.log(url);
