@@ -85,6 +85,11 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+  if (!message.author.bot && message.content.toLowerCase().includes("uber")) {
+    message.channel.send('40 eurasos :flushed: descuento uber-eats con el code: eats-79wwpq :smiling_imp: ');
+  }
+});
+client.on('message', message => {
   if (!message.author.bot && message.content.toLowerCase().includes("pato")) {
     let ojo: string = "🦆"
     var max = Math.floor(Math.random() * 20) + 1;
