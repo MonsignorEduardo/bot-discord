@@ -135,8 +135,8 @@ client.on('message', async message => {
         var max = Math.floor(Math.random() * y) + 1;
         //console.log(foo.data.children[max].data);
         try{
-            var isurl = foo.data.children[max].data.is_video;
-            var url = foo.data.children[max].data.url_overridden_by_dest;
+            var isurl = foo.data.children[max].data.is_video
+            var url = foo.data.children[max].data.url_overridden_by_dest
         }
         catch{
             console.log("WAT")
