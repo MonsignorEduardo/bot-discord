@@ -126,11 +126,23 @@ client.on('message', async message => {
 
 client.on('message', async message => {
   if (!message.author.bot && message.content.toLowerCase().includes("pito")) { 
-    const response = await axios({method:'get',url:'https://www.reddit.com/r/orslokx/top.json?t=week&limit=100'});
-    const x = response.data.data.dist
-    var y: number = +x;
-    var max = Math.floor(Math.random() * y) + 1;
-    const url:string = response.data.data.children[max].data.url_overridden_by_dest
+    var x = foo.data.dist;
+    var y = +x;
+    var isurl = true;
+    var url = "POLLAGORDA69";
+    while (isurl == true) {
+        console.log(max);
+        var max = Math.floor(Math.random() * y) + 1;
+        //console.log(foo.data.children[max].data);
+        try{
+            var isurl = foo.data.children[max].data.is_video;
+            var url = foo.data.children[max].data.url_overridden_by_dest;
+        }
+        catch{
+            console.log("WAT")
+        }
+    }
+    console.log(url);
     message.channel.send(url);
   }
 });
