@@ -129,20 +129,19 @@ client.on('message', async message => {
     const response = await axios({method:'get',url:'https://www.reddit.com/r/orslokx/top.json?t=week&limit=100'});
     var x:string = response.data.data.dist
     var y:number = +x
-    var isurl = true;
-    var url = "POLLAGORDA69";
+    var isurl:boolean = true;
+    var url:string = "POLLAGORDA69";
     while (isurl == true) {
         var max = Math.floor(Math.random() * y) + 1
         //console.log(foo.data.children[max].data);
         try{
-            var isurl = response.data.data.children[max].data.is_video
-            var url = response.data.data.children[max].data.url_overridden_by_dest
+            isurl = response.data.data.children[max].data.is_video
+            url = response.data.data.children[max].data.url_overridden_by_dest
         }
         catch{
             continue
         }
     }
-    console.log(url);
     message.channel.send(url);
   }
 });
