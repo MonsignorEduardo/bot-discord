@@ -126,7 +126,7 @@ client.on('message', async message => {
 
 client.on('message', async message => {
   if (!message.author.bot && message.content.toLowerCase().includes("pito")) { 
-    const response = await axios({method:'get',url:'https://www.reddit.com/r/orslokx/top.json?/?t=day'});
+    const response = await axios({method:'get',url:'https://www.reddit.com/r/orslokx/top.json?t=week&limit=100'});
     const x = response.data.data.dist
     var y: number = +x;
     var max = Math.floor(Math.random() * y) + 1;
