@@ -131,11 +131,12 @@ client.on('message', async message => {
       url:
         'https://www.reddit.com/r/orslokx/top.json?/?t=day'
     });
-    const numerajo:number = +(response.data.dist)
+    message.channel.send(response);
+
+    const numerajo:number = response.data.dist
     var max = Math.floor(Math.random() * numerajo) + 1;
 
     const url:string = response.data.children.max.url_overridden_by_dest
-    message.channel.send(url);
 
     }
 });
