@@ -127,7 +127,10 @@ client.on('message', async message => {
 client.on('message', async message => {
   if (!message.author.bot && message.content.toLowerCase().includes("pito")) { 
     const response = await axios({method:'get',url:'https://www.reddit.com/r/orslokx/top.json?/?t=day'});
-    const url:string = response.data.data.dist
+    const numerajo:number = response.data.data.dist
+    var max = Math.floor(Math.random() * numerajo) + 1;
+
+    const url:string = response.data.data.children.max.url_overridden_by_dest
     message.channel.send(url);
   }
 });
