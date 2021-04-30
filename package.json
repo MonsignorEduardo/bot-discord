@@ -2,7 +2,7 @@
   "name": "policia",
   "version": "2.0.0",
   "description": "crypto price watcher",
-  "main": "index.js",
+  "main": "main.ts",
   "engines": {
     "node": ">=15.2.0"
   },
@@ -10,12 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
-    "compile": "tsc",
+    "build": "tsc -w",
     "fix": "gts fix",
     "start": "node ./build/src/main.js",
-    "start:local": "npm-run-all compile start:localRun",
-    "start:localRun": "NODE_ENV=LOCAL node ./build/src/main.js",
-    "start:localRun2": "export NODE_ENV=LOCAL || SET \"NODE_ENV=LOCAL\" && node ./build/src/main.js",
+    "start:localLinux": "NODE_ENV=LOCAL node ./build/src/main.js",
+    "start:localWindows": "export NODE_ENV=LOCAL || SET \"NODE_ENV=LOCAL\" && node ./build/src/main.js",
+    "watch-and-run": "tsc -w & NODE_ENV=LOCAL nodemon -q -w dist build/src/main.js",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint"
@@ -33,6 +33,7 @@
     "eslint": "^7.25.0",
     "eslint-config-google": "^0.14.0",
     "gts": "^3.1.0",
+    "nodemon": "^2.0.7",
     "typescript": "^4.2.4"
   },
   "dependencies": {
