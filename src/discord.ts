@@ -56,10 +56,6 @@ async function meme2(message: Discord.Message) {
 
 export default function starDiscord() {
   const mapaComandos = new Map(Object.entries(comandos));
-  if (process.env.NODE_ENV === 'LOCAL') {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    require('dotenv').config();
-  }
   client.login(process.env.DISCORDKEY);
 
   client.once('ready', () => {
