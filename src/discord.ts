@@ -15,6 +15,7 @@ function ojo(message: Discord.Message) {
   }
   message.channel.send(ojo);
 }
+
 // Meme 1
 async function meme(message: Discord.Message) {
   try {
