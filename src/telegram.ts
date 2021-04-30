@@ -5,7 +5,7 @@ export default function startTelegram(tokenTelegram: string) {
   bot.start(ctx => ctx.reply('Welcome'));
   bot.help(ctx => ctx.reply('Send me a sticker'));
   bot.hears('carlos', ctx => ctx.reply('sssss'));
-  bot.on('sticker', ctx => ctx.reply('👍'));
+  bot.on('sticker', ctx => ctx.reply('te devuelvo un ok 👍'));
   bot.hears('hi', ctx => ctx.reply('Hey there'));
   bot.hears('cris', ctx => ctx.reply('No'));
   bot.launch();
