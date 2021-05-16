@@ -16,6 +16,16 @@ function ojo(message: Discord.Message) {
   message.channel.send(ojo);
 }
 
+// PATO
+function pato(message: Discord.Message) {
+  let ojo = '🦆';
+  const max = Math.floor(Math.random() * 20) + 1;
+  for (let i = 0; i < max; i++) {
+    ojo = ojo + '🦆';
+  }
+  message.channel.send(ojo);
+}
+
 // Meme 1
 async function meme(message: Discord.Message) {
   try {
@@ -72,6 +82,7 @@ export default function starDiscord() {
     if (mensaje.includes('ojo')) return ojo(message);
     if (mensaje.includes('meme')) return meme(message);
     if (mensaje.includes('pito')) return meme2(message);
+    if (mensaje.includes('pato')) return pato(message);
 
     mapaComandos.forEach((frase, comando) => {
       if (mensaje.includes(comando)) {
